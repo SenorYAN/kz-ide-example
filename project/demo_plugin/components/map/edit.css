@@ -41,3 +41,14 @@
     margin-top: 8px;
     margin-left: 60px;
 }
+
+#auto-show{  
+		visibility: hidden;  
+		position: absolute;  
+		width: 218px;
+		height: 200px;
+		left: 81px;
+		border: 1px solid #49adee;  
+		background-color: White; 
+	 	z-index: 2;	
+}  

@@ -1,0 +1,19 @@
+{
+    "theme_title":"",
+    "theme_schemes": [
+        {
+            "cover": "http://7bede40ef4e00.cdn.sohucs.com/97ec7913496a6ed49ede485fdf59077e",
+
+            "name": "red_storm",
+            "js": "",
+            "color": "#E74C4B"
+        } ,
+        {
+            "cover": "http://7bede40ef4e00.cdn.sohucs.com/97ec7913496a6ed49ede485fdf59077e",
+
+            "name": "red_storm_test",
+            "js": "",
+            "color": "#000"
+        }
+    ]
+}

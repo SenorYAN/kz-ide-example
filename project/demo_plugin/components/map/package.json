@@ -1,8 +1,18 @@
 {
+    "eid": "17",
+    "name": "map",
+    "version": "1.0",
     "title": "地图",
     "font_icon": "&#xe00a;",
-    "html": "<div class=\"mod mod-map\" data-map=\"{'lat':'{{lat}}','lng':'{{lng}}','zoom':'{{zoom}}'}\"><a href='http://api.map.baidu.com/geocoder?location={{lat}},{{lng}}&coord_type=bd09ll&output=html&src=sohu|kuaizhan' target='_blank'><img style=\"max-width:320px;width:100%;height:auto;display:block;margin-left:auto;margin-right:auto;\" src=\"http://api.map.baidu.com/staticimage?width=480&height=360&center={{lng}},{{lat}}&zoom={{zoom}}&markers={{lng}},{{lat}}&markerStyles=-1,http://7bede40ef4e00.cdn.sohucs.com/defc4f288e402d0777f28adaeac3c6f1,-1\"/></a></div>",
-
+    "area": "10",
+    "category": "3",
+    "seq": "19",
+    "html": "<div class=\"mod mod-map\" style='margin:{{margin-top}} {{margin-right}} {{margin-bottom}} {{margin-left}};' data-map=\"{'lat':'{{lat}}','lng':'{{lng}}','zoom':'{{zoom}}'}\"><a href='http://api.map.baidu.com/geocoder?location={{lat}},{{lng}}&coord_type=bd09ll&output=html&src=sohu|kuaizhan' target='_blank'><img style=\"max-width:320px;width:100%;height:auto;display:block;margin-left:auto;margin-right:auto;\" src=\"http://api.map.baidu.com/staticimage?width=480&height=360&center={{lng}},{{lat}}&zoom={{zoom}}&markers={{lng}},{{lat}}&markerStyles=-1,http://7bede40ef4e00.cdn.sohucs.com/defc4f288e402d0777f28adaeac3c6f1,-1\"/></a></div>",
+    "example_json": {
+        "lat": 39.915,
+        "lng": 116.404,
+        "zoom": 15
+    },
     "data_config": {
         "lat": {
             "type": "float",
@@ -18,14 +28,74 @@
             "type": "int",
             "require": true,
             "default": "15"
+        },
+        "margin-top": {
+            "type": "string",
+            "required": false,
+            "category": "style",
+            "widget": {
+                "type": "switchrow",
+                "label": "调整边距",
+                "opt": {
+                    "name": "chk_margin",
+                    "content": {
+                        "type": "margin"
+                    }
+                },
+                "data_name": "margin-top"
+            }
+        },
+        "margin-right": {
+            "type": "string",
+            "required": false,
+            "category": "style"
+        },
+        "margin-bottom": {
+            "type": "string",
+            "required": false,
+            "category": "style"
+        },
+        "margin-left": {
+            "type": "string",
+            "required": false,
+            "category": "style"
         }
     },
+    "create_time": "1374817161",
+    "update_time": "1376017489",
+    "status": null,
     "widgets": {
         "style": [
-
+            {
+                "type": "switchrow",
+                "label": "调整边距",
+                "opt": {
+                    "name": "chk_margin",
+                    "content": {
+                        "type": "margin"
+                    }
+                },
+                "data_name": "margin-top"
+            }
         ],
         "property": [
             {
+                "data_name": "lat"
+            },
+            {
+                "data_name": "lng"
+            },
+            {
+                "data_name": "zoom"
+            },
+            {
+                "data_name": "margin-right"
+            },
+            {
+                "data_name": "margin-bottom"
+            },
+            {
+                "data_name": "margin-left"
             }
         ]
     }

@@ -1,0 +1,694 @@
+
+/*整体页面头部*/
+body{
+	background:url(../images/bj.png) repeat 50% 50%;
+	 background-size:3px auto;
+}
+.phone-header {
+	background:url(../images/top.png) no-repeat 50% 50%;
+	 background-size:320px auto;
+}
+@media screen and (min-width:321px){
+	.phone-header{
+		background:url(../images/top.png) no-repeat 50% 50%;
+		background-size:100% 100%;
+	}
+}
+
+.phone-header .cell{
+	 min-height: 42px;
+}
+
+.phone-header .mod-pic,.phone-header .mod-pic{
+    margin:0;
+    border:0;
+    box-shadow:none;
+    background:transparent;
+}
+
+.mod-pic img{
+	border: 1px #fff solid;
+	border-radius: 2px;
+	padding: 5px;
+	background-color: rgba(255,255,255,0.3);
+	border-color: rgba(255,255,255,0.3);
+}
+.phone-header .mod-pic img{
+	border: 0;
+	border-radius: 0;
+	padding: 0;
+	background:none;
+}
+
+/*整体页面主体*/
+.phone-main {
+    background:url(../images/bj.png) repeat 50% 50%;
+	 background-size:3px auto;
+}
+
+/*mod-themenav2 ,  mod-themenav1  内置导航组件
+ mod-nav-theme1  导航组件（可拖拽和删除的）
+*/
+
+.mod-themenav3 a,
+.mod-themenav2 a,
+.mod-themenav1  a,
+.mod-nav.t1 a,
+.mod-nav-theme1 a {
+    color: #fff;
+    border: none;
+}
+
+.mod-themenav3 .cur a,
+.mod-themenav2 .cur a,
+.mod-themenav1 .cur a,
+.mod-nav.t1 .cur a,
+.mod-nav-theme1 .cur a {
+    color: #fff;
+}
+/*导航组件中当前选中的导航项*/
+
+.mod-nav{
+	box-shadow: 0 1px 3px #e1e2e4;
+}
+
+.mod-themenav3  .cur a,
+.mod-themenav2  .cur a,
+.mod-themenav1  .cur a,
+.mod-nav.t1 .cur a ,
+.mod-nav-theme1 .cur a {
+    width: auto;
+}
+
+.mod-nav.t1, .mod-nav-theme1{
+	background: url(../images/nav1.png) no-repeat 50% 50%;
+   background-size: 320px auto;
+	height:50px;
+}
+.mod-nav.t2, .mod-nav-theme2{
+	background: url(../images/nav2.png) no-repeat 50% 50%;
+   background-size: 320px auto;
+	height:50px;
+}
+.mod-nav.t3, .mod-nav-theme3{
+	background: url(../images/nav3.png) no-repeat 50% 50%;
+   background-size: 320px auto;
+	height:50px;
+}
+@media screen and (min-width:321px)  and (max-width:780px){
+	.mod-nav.t1, .mod-nav-theme1{
+		background: url(../images/nav1.png) no-repeat 50% 50%;
+  		background-size: 100% 100%;
+		height:50px;
+	}
+	.mod-nav.t2, .mod-nav-theme2{
+		background: url(../images/nav2.png) no-repeat 50% 50%;
+  		background-size: 100% 100%;
+		height:50px;
+	}
+	.mod-nav.t3, .mod-nav-theme3{
+		background: url(../images/nav3.png) no-repeat 50% 50%;
+  		background-size: 100% auto;
+		height:50px;
+	}
+}
+.configurator .mod-nav.t1, .configurator  .mod-nav-theme1{
+    background: url(../images/nav1.png) no-repeat 50% 50%;
+    background-size: 100% 100%;
+    height:50px;
+}
+.configurator .mod-nav.t2,.configurator  .mod-nav-theme2{
+    background: url(../images/nav2.png) no-repeat 50% 50%;
+    background-size: 100% 100%;
+    height:50px;
+}
+.configurator .mod-nav.t3, .configurator .mod-nav-theme3{
+    background: url(../images/nav3.png) no-repeat 50% 50%;
+    background-size: 100% 100%;
+    height:50px;
+}
+
+.btn-highlight, .btn-highlight-theme{
+    height: 40px;
+    background: url(../images/btn02.gif) repeat 0 0;
+    background-size: 3px auto;
+    color: #fff;
+    position: relative;
+    line-height: 36px;
+	 border:2px #2C2526 solid;
+	 border-radius:20px;
+}
+.btn-highlight-theme{
+	 background: url(../images/btn01.gif) repeat 0 0;
+    background-size: 3px auto;
+}
+
+.btn-flat, .btn-flat-theme {
+    height: 40px;
+    background: url(../images/btn04.gif) repeat 0 0;
+    background-size: 3px auto;
+    color: #fff;
+    position: relative;
+    line-height: 36px;
+	 border:2px #271A1B solid;
+	 border-radius:20px;
+}
+.btn-flat-theme{
+	 background: url(../images/btn03.gif) repeat 0 0;
+    background-size: 3px auto;
+}
+
+.btn-gradient, .btn-gradient-theme{
+	 height: 40px;
+    background: url(../images/btn06.gif) repeat 0 0;
+    background-size: 3px auto;
+    color: #fff;
+    position: relative;
+    line-height: 36px;
+	 border:2px #271A1B solid;
+	 border-radius:20px;
+}
+.btn-gradient-theme{
+	background: url(../images/btn05.gif) repeat 0 0;
+    background-size: 3px auto;
+}
+
+/*
+导航组件:
+旧样式编写 mod-nav-theme1 mod-nav-theme2   mod-nav-theme3
+为了兼容旧样式规则所以增量添加，
+新样式规则为mod-nav.t1 mod-nav.t2 mod-nav.t3
+
+*/
+.mod-nav-theme2 ,.mod-nav.t2{
+    position: relative;
+    box-shadow: 0 1px 3px #e1e2e4;
+}
+
+.mod-nav.t2 a ,
+.mod-nav-theme2 a {
+    color: #fff;
+    font-size: 15px;
+    border: none;
+}
+.mod-nav.t2 a:hover ,
+.mod-nav-theme2 a:hover {
+    color: #E74C4B;
+}
+
+.mod-nav.t3,
+.mod-nav-theme3 {
+    position: relative;
+    box-shadow: 0 1px 3px #e1e2e4;
+}
+
+.mod-nav.t3 li i,
+.mod-nav-theme3 li i{
+	display:none;
+}
+
+.mod-nav-t3 a, .mod-nav.t3 a:hover, .mod-nav-theme3 a, .mod-nav-theme3 a:hover{
+	border-left:0
+}
+
+.mod-nav.t3 a,
+.mod-nav-theme3 a {
+    color: #fff;
+    font-size: 15px;
+    line-height:100%;
+}
+.mod-nav.t3 a:hover,
+.mod-nav-theme3 a:hover {
+    color: #fff;
+}
+
+/*底板组件有10像素padding。但是在编辑环境下是3像素，这里加!important*/
+
+.mod-title.t3 {
+   position: relative;
+   background:url(../images/tt061.png) repeat 0 0;
+	 background-size:320px auto;
+	 margin:0 auto;
+	 border:1px solid;
+	 padding:0;
+}
+
+@media screen and (min-width:321px) and (max-width:780px){
+	.mod-title.t3{
+		background:url(../images/tt061.png) no-repeat 50% 50%;
+		background-size:100% 100%;
+	}
+}
+
+.mod-title.t3 h2 {
+    padding:0 30px;
+    display: block;
+    border: none;
+	 color:#fff;
+	 background:url(../images/tt01.png) no-repeat 50% 50%;
+	 background-size:320px auto;
+	 line-height:50px;
+}
+.configurator .mod-title{
+    line-height:100%;
+}
+.mod-title.t1 {
+    position: relative;
+    background:url(../images/tt041.png) no-repeat 0 0;
+	 background-size:320px auto;
+	 margin:0 auto;
+	 border:1px solid;
+	 opacity:1;
+}
+
+@media screen and (min-width:321px) and (max-width:780px){
+
+	.mod-title.t1{
+		background:url(../images/tt041.png) no-repeat 50% 50%;
+		background-size:100% 100%;
+		padding-left:10px;
+	}
+}
+
+.mod-title.t1 h2 {
+    padding:0 30px;
+    display: block;
+    border: none;
+	 color:#fff;
+	 background:url(../images/tt01.png) no-repeat 50% 50%;
+	 background-size:320px auto;
+	 line-height:50px;
+}
+
+.mod-title.t2 {
+	 position: relative;
+   background:url(../images/tt051.png) repeat 50% 50%;
+	 background-size:320px auto;
+	 margin:0 auto;	
+	 border:0;
+	 padding:0;
+}
+
+.mod-title.t2 h2 {
+    position: relative;
+    border-bottom: 0;
+    color: #fff;
+    display: inline-block;
+    top: 0px;
+    padding: 0 30px;
+	 line-height:50px;
+}
+
+.article-hd .mod-title.t0 h2{
+   border:none;
+    padding-left:0px;
+    background: none;
+    overflow:auto;
+    line-height:1.4;
+}
+.article-hd .mod-title.t0{
+    background:none;
+    margin-left:0px;
+    height:auto;
+}
+
+
+.mod-title.t0 {
+	background:url(../images/tt031.png) no-repeat 50% 50%;
+	 background-size:320px auto;
+    border: none;
+    text-align: left;
+    padding: 0px;
+    background-position:0 0;
+}
+
+@media screen and  (min-width:321px) and (max-width:780px){
+	.mod-title.t0 {
+		background:url(../images/tt031.png) no-repeat 50% 50%;
+		background-size:100% 100%;
+	}
+}
+
+.mod-title.t0 h2 {
+    position: relative;
+    color:#fff;
+    display: block;
+    top: 0px;
+    padding:0 30px;
+	 background:url(../images/tt01.png) no-repeat 50% 50%;
+	 background-size:320px auto;
+	 line-height:50px;
+}
+
+.mod-title{
+	overflow:hidden;
+	height:50px;
+}
+.mod-title h2 {
+    color: #4f5b65;
+	 overflow:hidden;
+}
+
+.mod-title.t4 {
+ 	 background:url(../images/tt02.png) repeat-x 50% 50%;
+	 background-size:6px auto;
+}
+.configurator .mod-title.t4{
+	background:url(../images/tt02.png) repeat-x 50% 50%;
+	 background-size:6px auto;
+}
+
+.mod-title.t4 h2 {
+    padding: 0 30px;
+    display: block;
+    border: none;
+	 color:#fff;
+	 background:url(../images/tt01.png) no-repeat 50% 50%;
+	 background-size:320px auto;
+	 line-height:50px;
+}
+
+.mod-pictxt {
+    margin: 2.1875% 2.1875% 0px 2.1875%;
+    border-radius: 3px;
+    position: relative;
+    padding: 10px;
+	 color:#fff;
+}
+.mod-pictxt li{
+	border-top: 1px #fff solid;
+	border-top-color: rgba(255,255,255,0.2);
+}
+.mod-pictxt li img{
+	border: 1px #fff solid;
+	border-radius: 2px;
+	padding: 5px;
+	background-color: rgba(255,255,255,0.3);
+	border-color: rgba(255,255,255,0.3);
+}
+
+
+.mod-pictxt .mod-button a{
+    width:100%;
+}
+
+.mod-link, .mod-link a {
+   color: #2CA9DF;
+}
+
+.mod-link.t1:before, .mod-link.t3:after {
+	 color: #2CA9DF;
+}
+
+.mod-link {
+    position: relative;
+	 text-align:center;
+	 margin:0 auto;
+	 text-align:left;
+}
+.mod-link.t3{
+	padding-right:12px;
+}
+.configurator .mod-link.t3{
+ text-align:left; 
+}
+
+/*图片*/
+.mod-picone {
+    position: relative;
+    box-shadow: 0 1px 3px #e1e2e4;
+    padding: 10px;
+}
+
+/*图集*/
+.mod-picgroup {
+    position: relative;
+    box-shadow: 0 1px 3px #e1e2e4;
+	 margin:0 auto;
+}
+
+.mod-picgroup .pic-gp3{
+	padding:3px 6px 0;
+}
+.mod-picgroup .pic-gp2{
+	padding:5px 6px 0;
+}
+
+/*图集下：两列布局，3列布局*/
+.mod-picgroup .pic-gp2 li {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    width: 50%;
+    padding-bottom: 6px;
+}
+
+.mod-picgroup li img{
+	border:1px #fff solid;
+	border-radius:2px;
+	 padding:5px;
+	 background-color: rgba(255,255,255,0.3);
+	 border-color: rgba(255,255,255,0.3);
+}
+
+.mod-picgroup .pic-gp2 li:nth-child(odd) {
+    padding-right: 1.5%;
+}
+
+.mod-picgroup .pic-gp2 li:nth-child(even) {
+    padding-left: 1.5%;
+}
+
+.mod-picgroup .pic-gp2 li:nth-last-child(1) {
+    padding-bottom: 0;
+}
+
+.mod-picgroup .pic-gp2 li:nth-last-child(2) {
+    padding-bottom: 0;
+}
+/*组图（焦点图）*/
+.mod-focus {
+    position: relative;
+}
+
+.mod-focus .swipe-wrap p{
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.mod-focus .focus-ctr span{
+    background:url(../images/zu02.png) no-repeat 50% 50%;
+	 background-size:8px auto;
+}
+.mod-focus .focus-ctr span.cur {
+    background:url(../images/zu01.png) no-repeat 50% 50%;
+	 background-size:8px auto;
+}
+.site-title .mod-text{
+    color:#fff;
+}
+
+.configurator .mod-text{
+    color:#000;
+}
+
+/*文本组件*/
+.mod-para,.mod-text {
+    color: #8b939a;
+}
+
+.mod-text {
+    position: relative;
+    box-shadow: 0 1px 3px #e1e2e4;
+    padding: 10px 15px;
+	 margin:0 auto;
+	 color:#fff;
+}
+
+/*
+配置窗口的文本组件
+*/
+.configurator .mod-text, .configurator .mod-text,
+.site-title .mod-text,
+.kz-footer .mod-text {
+    margin: 0;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+}
+
+/*文章列表*/
+
+.mod-pictxt h3 {
+    color: #ddd;
+}
+
+.mod-pictxt p {
+    color: #a29d9d;
+}
+
+.mod-pictxt .time {
+    color: #686262;
+}
+/*组图*/
+
+.mod-picgroup .pic-gp3 li {
+    padding: 1% 0;
+    width: 32%;
+}
+
+.mod-picgroup .pic-gp3 li:nth-child(3n+2) {
+    padding: 1% 2%
+}
+
+/*表单组件*/
+.crow-form-box input, .crow-form-box textarea {
+    border: solid 1px #e8eaf0;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: none;
+    font-size:14px;
+}
+.mod-form .crow-form-box{
+    padding:5px 0px;
+}
+.mod-form {
+    position: relative;
+    box-shadow: 0 1px 3px #e1e2e4;
+    padding: 10px;
+}
+
+.mod-form .crow-form-box p{
+	color:#fff;
+}
+
+.mod-share {
+	  text-align: left;
+    padding:10px 0 10px 14px;
+	 margin:0 auto;
+}
+.mod-share .hd{
+    background: none;
+    color: #ccc;
+    font-size: 16px;
+    line-height: 40px;
+    width:66px;
+}
+.mod-share .hd::after {
+    content: "到:";
+    font-size: 16px;
+}
+.mod-share a{
+    background:url("../images/share.png") no-repeat;
+    background-size: 193px auto;
+    width:38px;
+    height:38px;
+
+}
+.mod-share .qzone {
+    background-position: -38px 0;
+}
+.mod-share .sina {
+    background-position: 0 0;
+}
+.mod-share .renren {
+    background-position: -114px 0;
+}
+.mod-share .douban {
+    background-position: -76px 0;
+}
+.mod-share .qqweibo {
+    background-position: -152px 0;
+}
+.mod-share .sohu{
+    display:none;
+}
+
+.mod-layout2coloums {
+    margin: 2.1875% 2.1875% 0px 2.1875%;
+    position: relative;
+    padding: 10px;
+}
+
+.mod-layout2coloums .mod,
+.mod-layout_floor .mod {
+    box-shadow: none;
+    border: none;
+    padding: 0;
+}
+.mod-layout_floor{
+    background:transparent;
+}
+.mod-form input,.mod-form textarea{
+	background-color:rgba(255,0,0,0.2);;
+	border:1px #413539 solid;
+}
+
+.article-bd, .article-content{
+	background:transparent!important;
+}
+
+.configurator .mod-nav.t1{
+	background:url(../images/bj.png) repeat 50% 50%;
+	 background-size:3px auto;
+}
+
+.mod-form input, .mod-form textarea{
+	color:#787070;
+}
+
+.mod-shop-item .item-title-wrp,.mod-shop-item .item-detail span{
+	color:#fff;
+}
+
+.mod-shop .item-bottom a{
+	color:#fff;
+}
+
+.mod-themenav4 .dropbox{
+	background: -webkit-linear-gradient(top, #5F222a 0%, #220B0E 100%);
+	top:48px;
+}
+.mod-themenav4 .dropbox li{
+	border-top:1px #fff solid;
+	border-color: rgba(255,255,255,0.14);
+}
+.mod-themenav4 .dropbox li a{
+	color:#ddd;
+}
+.mod-themenav4 .ico-arrow-bd{
+	background:url(../images/cor.png) no-repeat 50% 50%;
+	background-size:20px auto;
+	border:0;
+	width:20px;
+	height:10px;
+	top:8px;
+	left:-4px;
+}
+
+.mod-themenav2{
+	background:#3F222a;
+}
+
+.mod-themenav2 .dropbox{
+	background: -webkit-linear-gradient(top, #220B0E 0%, #5F222a 100%);
+	bottom:55px;
+}
+.mod-themenav2 .dropbox li{
+	border-top:1px #fff solid;
+	border-color: rgba(255,255,255,0.14);
+	margin:0;
+}
+.mod-themenav2 .dropbox li a{
+	color:#ddd;
+}
+.mod-themenav2 .ico-arrow-bd{
+	background:url(../images/cor1.png) no-repeat 50% 50%;
+	background-size:20px auto;
+	border:0;
+	width:20px;
+	height:10px;
+	top:0;
+	left:-1px;
+}

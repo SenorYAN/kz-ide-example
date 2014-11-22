@@ -7,13 +7,13 @@
         "width": {
             "type": "string",
             "required": true,
-            "default": "50%"
+            "default": "80%"
         }
     },
     "widgets": {
         "style": [
             {
-                "label": "宽度",
+                "label": "高度",
                 "type": "slider",
                 "opt": {
                     "name":"width",

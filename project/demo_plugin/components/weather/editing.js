@@ -20,7 +20,7 @@ define(["jquery", "configurableComponent", 'lib/mustache', 'utils/uiHelper', 'ui
             var url = "http://php.weather.sina.com.cn/iframe/index/w_cl.php?code=js&city=" + citytq + "&dfc=3";
             var tq = "";
             var img1, img2;
-            var f, _f;
+            var f, _f, ff;
             $.ajax({
                 url: url,
                 dataType: "script",
@@ -44,23 +44,28 @@ define(["jquery", "configurableComponent", 'lib/mustache', 'utils/uiHelper', 'ui
                     var picurl = "http://mat1.gtimg.com/weather/2014gaiban/";
                     for (var key in _w) {
                         if (key == 0) {
-                            console.log(_w.keys);
-                            $(_td[0]).html(citytq);
-                            if (new Date().getHours() > 17) {
-                                f = _w[key].f1 + "_1.png";
-                                // ff = _w[key].f1 + "_yejian.jpg";
-                                img1 = "<img width='80px' height='80px' src='http://php.weather.sina.com.cn/images/yb3/180_180/" + f + "'/>";
-                                $(_td[1]).html( img1);
-                                $(_td[2]).html( day[date.getDay() + i] +  _w[key].s2);
-                                $(_td[3]).html( _w[key].t1 + "℃～" + _w[key].t2 + "℃");
-                            } else {
-                                f = _w[key].f1 + "_0.png";
-                                img1 = "<img width='70px' height='70px' src='http://php.weather.sina.com.cn/images/yb3/180_180/" + f + "'/>";
-                                $(_td[1]).html( img1);
-                                $(_td[2]).html( day[date.getDay() + i] );
-                                $(_td[3]).html( _w[key].s1 +  _w[key].t2 + "℃～" + _w[key].t1 + "℃");
-                            }
-                            $(_td[4]).html( _w[key].d1 + _w[key].p1 + "级");
+                            $(_td[0]).html( citytq);
+                                    if (new Date().getHours() > 17) {
+                                        f = _w[key].f1 + "_1.png";
+                                        ff = (_w[key].s1.indexOf("雨")>=0||_w[key].s1.indexOf("雪")>=0)?(_w[key].s1.indexOf("雨")>=0?picurl + "xiaoyu.jpg":picurl + "xue.jpg"):picurl + _w[key].f1 + "_yejian.jpg";
+                                        console.log(ff);
+                                        that.$viewEl.find(".weather").css("background-image","url(" + ff +")");
+                                        img1 = "<img width='80px' height='80px' src='http://php.weather.sina.com.cn/images/yb3/180_180/" + f + "'/>";
+                                        $(_td[1]).html( img1);
+                                        $(_td[2]).html( day[date.getDay() + i] +  _w[key].s2);
+                                        $(_td[3]).html( _w[key].s1 +  _w[key].t1 + "℃");
+                                    }
+                                    else {
+                                        f = _w[key].f1 + "_0.png";
+                                        ff = (_w[key].s1.indexOf("雨")>=0||_w[key].s1.indexOf("雪")>=0)?(_w[key].s1.indexOf("雨")>=0?picurl + "xiaoyu.jpg":picurl + "xue.jpg"):picurl + _w[key].f1 + "_baitian.jpg";
+                                        console.log(ff);
+                                        that.$viewEl.find(".weather").css("background-image","url(" + ff +")");
+                                        img1 = "<img width='80px' height='80px' src='http://php.weather.sina.com.cn/images/yb3/180_180/" + f + "'/>";
+                                        $(_td[1]).html( img1);
+                                        $(_td[2]).html( day[date.getDay() + i] );
+                                        $(_td[3]).html( _w[key].s1 +  _w[key].t1 + "℃");
+                                    }
+                                    $(_td[4]).html( _w[key].d1 + _w[key].p1 + "级");
                         } else {
                             f = _w[key].f1 + "_0.png";
                             _f = _w[key].f2 + "_0.png";
@@ -70,11 +75,13 @@ define(["jquery", "configurableComponent", 'lib/mustache', 'utils/uiHelper', 'ui
                             }
                             img1 = "<img width='32px' height='32px' src='http://php.weather.sina.com.cn/images/yb3/78_78/" + f + "'/>";
                             img2 = "<img width='32px' height='32px' src='http://php.weather.sina.com.cn/images/yb3/78_78/" + _f + "'/>"
-                            tq = day[date.getDay() + i] + " " + img1 + " " + _w[key].s1 +  _w[key].t1 + "℃～" + _w[key].t2 + "℃  " ;
+                            tq = day[date.getDay() + i] + " " + img1 + " " + _w[key].s1 +  _w[key].t2 + "℃～" + _w[key].t1 + "℃  " ;
                             $(_tr[i - 1]).html(tq);
                         }
                         i++;
                     }  
+
+
                 },
                 error: function(){
                     that.$configEl.find(".tip-error").css("display","block");

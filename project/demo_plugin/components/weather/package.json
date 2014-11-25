@@ -1,11 +1,11 @@
 {
     "title": "天气",
     "font_icon": "&#xe02d;",
-    "html": "<div city=\"{{citytq}}\" first=\"{{first}}\" class=\"weather\" style=\"text-align: center;height: {{height}};color:{{text_color}}; {{_progdata_}}>{{style}}</div>",
+    "html": "<div city=\"{{citytq}}\" first=\"{{first}}\" class=\"weather\" {{_progdata_}} style=\"text-align: center;height: {{height}};color:{{text_color}}; {{_progdata_}}>{{style}}</div>",
     "data_config": {
         "height": {
             "type": "string",
-            "default": "170px"
+            "default": "180px"
         },
         "text_color": {
             "type": "string",
@@ -13,7 +13,7 @@
         },
         "style": {
             "type": "string",
-            "default": "<div style=\"float:left;text-align: center\"><ul class=\"weather_ul_today\" style=\"list-style: none;font-size: 12px;font-family: 'Microsoft YaHei';\"><li style=\"font-size: 22px\"></li><li></li><li></li><li></li><li></li></ul></div><div style=\"float:right\"><ul class=\"weather_ul\" style=\"list-style: none;font-size: 13px;font-family: 'Microsoft YaHei';\"><li></li><li></li><li></li></ul></div>"
+            "default": "<div class=\"left\" style=\"float:left;text-align: center\"><ul class=\"weather_ul_today\" style=\"list-style: none;font-size: 12px;font-family: 'Microsoft YaHei';\"><li style=\"font-size: 27px\"></li><li></li><li></li><li></li><li></li></ul></div><div class=\"right\" style=\"float:right\"><ul class=\"weather_ul\" style=\"list-style: none;font-size: 13px;font-family: 'Microsoft YaHei';\"><li></li><li></li><li style=\"margin:0;\"></li></ul></div>"
         },
         "citytq":{
             "type": "string",
@@ -60,7 +60,7 @@
                             "value": "#00ffff"
                         },
                         {
-                            "value": "ff00ff"
+                            "value": "#ff00ff"
                         }
                     ]
                 },

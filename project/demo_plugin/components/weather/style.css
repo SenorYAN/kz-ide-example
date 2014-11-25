@@ -1,3 +1,10 @@
-.weather_ul hr{
-	margin: 0 0 1.45em;
+.weather {
+	padding: 4%;
+	background-image:url(http://mat1.gtimg.com/weather/2014gaiban/xiaoyu.jpg); 
+	background-position:center;
+}
+.weather_ul li{
+	height: 50px;
+	line-height: 50px;
+	text-align: left;
 }

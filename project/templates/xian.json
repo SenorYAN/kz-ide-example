@@ -1,0 +1,17 @@
+[
+  {
+    "deletable": true,
+    "configurable": true,
+    "movable": true,
+    "value": {
+      "height": "170px",
+      "color": "#ffe7d3",
+      "color2": "#4ddbbe",
+      "text_color": "#333333",
+      "style": "<div style=\"float:left;text-align: center\"><ul class=\"weather_ul_today\" style=\"list-style: none;font-size: 12px;font-family: 'Microsoft YaHei';\"><li style=\"font-size: 22px\"></li><li></li><li></li><li></li><li></li></ul></div><div style=\"float:right\"><ul class=\"weather_ul\" style=\"list-style: none;font-size: 13px;font-family: 'Microsoft YaHei';\"><hr /><li></li><hr/><li></li><hr/><li></li></ul></div>",
+      "citytq": "西安",
+      "first": false
+    },
+    "ename": "demo_plugin/components/weather/"
+  }
+]

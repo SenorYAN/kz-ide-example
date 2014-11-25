@@ -7,8 +7,6 @@ define(['jquery', 'configurableComponent'], function($, Component) {
     //初始化组件类，参数为组件配置，如果组件第一次创建，将传递空配置，如果组件为已经创建到视图窗口，重新加载，将传递已保存的配置
     return Component.extend({
         "html_edit": "<div class=\"mod mod-nav mod-nav-{{nav_theme}} {{nav_theme}}\" style='margin:{{margin-top}} {{margin-right}} {{margin-bottom}} {{margin-left}};'><span class=\"arr-left nav-arrow\"><</span><div class=\"nav-container\"><ul class=\"nav1\">{{#items}}<li style=\"width:{{width}}\"><a href=\"javascript:;\" url=\"{{link}}\" title=\"{{title}}\">{{title}}</a><i></i></li>{{/items}}</ul><ul class=\"nav2\"></ul></div><span class=\"arr-right nav-arrow\">></span></div>",
-        
-        ""
         //输出到配置窗口，事件绑定使用$el.delegate 绑定，当删除$el时同时删除对应事件
         renderConfigurator: function() {
             var that = this;

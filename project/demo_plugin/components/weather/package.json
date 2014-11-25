@@ -1,30 +1,34 @@
 {
     "title": "天气",
     "font_icon": "&#xe02d;",
-    "html": "<div class=\"weather\" style=\"text-align: center;height: {{height}};color:{{text_color}};background: -webkit-gradient(linear, 0 0, 0 100%, from({{color}}), to({{color2}}));\" {{_progdata_}}>{{style}}</div>",
+    "html": "<div city=\"{{citytq}}\" first=\"{{first}}\" class=\"weather\" style=\"text-align: center;height: {{height}};color:{{text_color}}; {{_progdata_}}>{{style}}</div>",
     "data_config": {
         "height": {
             "type": "string",
             "default": "170px"
         },
-        "color": {
-            "type": "string",
-            "default": "#ffe7d3"
-        },
-        "color2": {
-            "type": "string",
-            "default": "#4ddbbe"
-        },
         "text_color": {
             "type": "string",
-            "default": "#d449cc"
+            "default": "#ffffff"
         },
         "style": {
             "type": "string",
-            "default": "<div style=\"float:left;text-align: center\"><ul class=\"weather_ul_today\" style=\"list-style: none;font-size: 12px;font-family: 'Microsoft YaHei';\"><li style=\"font-size: 22px\"></li><li></li><li></li><li></li><li></li></ul></div><div style=\"float:right\"><ul class=\"weather_ul\" style=\"list-style: none;font-size: 13px;font-family: 'Microsoft YaHei';\"><hr /><li></li><hr/><li></li><hr/><li></li></ul></div>"
+            "default": "<div style=\"float:left;text-align: center\"><ul class=\"weather_ul_today\" style=\"list-style: none;font-size: 12px;font-family: 'Microsoft YaHei';\"><li style=\"font-size: 22px\"></li><li></li><li></li><li></li><li></li></ul></div><div style=\"float:right\"><ul class=\"weather_ul\" style=\"list-style: none;font-size: 13px;font-family: 'Microsoft YaHei';\"><li></li><li></li><li></li></ul></div>"
+        },
+        "citytq":{
+            "type": "string",
+            "default": "北京"
+        },
+        "first":{
+            "type": "string",
+            "default": "true"
         }
     },
     "widgets": {
+        "property":[
+            {
+            }
+        ],
         "style": [
             {
                 "label": "字体颜色",
@@ -35,86 +39,32 @@
                     "options": [
                         {
                             "cur": true,
-                            "value": "#FFFFFF"
+                            "value": "#FF0000"
                         },
                         {
-                            "value": "#024d2f"
+                            "value": "#00ff00"
                         },
                         {
-                            "value": "#ececec"
+                            "value": "#0000ff"
                         },
                         {
-                            "value": "#f9f2cd"
+                            "value": "#000000"
                         },
                         {
-                            "value": "#e2effe"
+                            "value": "#ffffff"
                         },
                         {
-                            "value": "#ffeceb"
+                            "value": "#ffff00"
+                        },
+                        {
+                            "value": "#00ffff"
+                        },
+                        {
+                            "value": "ff00ff"
                         }
                     ]
                 },
                 "data_name": "text_color"
-            },
-            {
-                "label": "渐变颜色1",
-                "type": "colorpicker",
-                "opt": {
-                    "name": "color",
-                    "theme": "full",
-                    "options": [
-                        {
-                            "cur": true,
-                            "value": "#FFFFFF"
-                        },
-                        {
-                            "value": "#024d2f"
-                        },
-                        {
-                            "value": "#ececec"
-                        },
-                        {
-                            "value": "#f9f2cd"
-                        },
-                        {
-                            "value": "#e2effe"
-                        },
-                        {
-                            "value": "#ffeceb"
-                        }
-                    ]
-                },
-                "data_name": "color"
-            },
-            {
-                "label": "渐变颜色2",
-                "type": "colorpicker",
-                "opt": {
-                    "name": "color2",
-                    "theme": "full",
-                    "options": [
-                        {
-                            "cur": true,
-                            "value": "#FFFFFF"
-                        },
-                        {
-                            "value": "#024d2f"
-                        },
-                        {
-                            "value": "#ececec"
-                        },
-                        {
-                            "value": "#f9f2cd"
-                        },
-                        {
-                            "value": "#e2effe"
-                        },
-                        {
-                            "value": "#ffeceb"
-                        }
-                    ]
-                },
-                "data_name": "color2"
             }
         ]
     }

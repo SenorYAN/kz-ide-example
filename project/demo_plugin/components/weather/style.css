@@ -12,21 +12,40 @@
 	border-radius: 8px;
 	margin-bottom: 6px;
 }
+
+.weather_ul li span{
+	display: inline-block;
+}
+
+.weather_ul li span:nth-child(1){
+	width: 23%;
+}
+.weather_ul li span:nth-child(2){
+	width: 19%;
+}
+.weather_ul li span:nth-child(3){
+	width: 15%;
+}
+.weather_ul li span:nth-child(4){
+	width: 41%;
+}
+
 .weather_ul_today li{
-	width: 100px;
+	width: 90px;
 	margin: 0 auto;
 }
 
 .left{
-	height: 180px;
+	height: 172px;
 	background: rgba(0,0,0,0.3);
 	border-radius: 8px;
+	padding: 2px 0;
 }
 
 .left{
-	width: 34%;
+	width: 30%;
 }
 
 .right{
-	width: 64%;
+	width: 67%;
 }

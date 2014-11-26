@@ -3,19 +3,12 @@
  */
 define(["jquery", "configurableComponent", 'lib/mustache', 'utils/uiHelper', 'ui' , 'baiduMapApi'], function($, Component, mustache, uiHelper) {
     'use strict';
-    var citytq,
-        first = true; // 获取城市
+    var citytq; // 获取城市
     var search = function(that) {
-        console.log(that);
         var cityUrl = 'http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js';
         var date = new Date();
         var day = new Array("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日", "星期一", "星期二", "星期三", "星期四");
-        $.getScript(cityUrl, function(script, textStatus, jqXHR) {
-            if(first){
-                citytq = remote_ip_info.city;
-            }else{
-                citytq = that.data["citytq"];
-            }
+            citytq = that.data["citytq"];
             console.log(citytq);
             var url = "http://php.weather.sina.com.cn/iframe/index/w_cl.php?code=js&city=" + citytq + "&dfc=3";
             var tq = "";
@@ -29,8 +22,9 @@ define(["jquery", "configurableComponent", 'lib/mustache', 'utils/uiHelper', 'ui
                     "day": 3
                 },
                 success: function(data) {
-                    console.log(this);
+                    console.log(url);
                     var _w = window.SWther.w[citytq];
+                    console.log(_w);
                     if(typeof window.SWther.w[citytq]==="undefined"){
                         that.$configEl.find(".tip-error").css({"display":"block","visibility":"visible"});
                         that.$configEl.find("#addr").css("border","1px solid red");
@@ -59,7 +53,6 @@ define(["jquery", "configurableComponent", 'lib/mustache', 'utils/uiHelper', 'ui
                                     if (new Date().getHours() > 17) {
                                         f = _w[key].f2 + "_1.png";
                                         ff = (_w[key].s2.indexOf("雨")>=0||_w[key].s2.indexOf("雪")>=0)?(_w[key].s2.indexOf("雨")>=0?picurl + "xiaoyu.jpg":picurl + "xue.jpg"):picurl + _w[key].f2 + "_yejian.jpg";
-                                        console.log(ff);
                                         that.$viewEl.find(".weather").css("background-image","url(" + ff +")");
                                         img1 = "<img width='70px' height='70px' src='http://php.weather.sina.com.cn/images/yb3/180_180/" + f + "'/>";
                                         $(_td[1]).html( img1);
@@ -69,7 +62,6 @@ define(["jquery", "configurableComponent", 'lib/mustache', 'utils/uiHelper', 'ui
                                     else {
                                         f = _w[key].f1 + "_0.png";
                                         ff = (_w[key].s1.indexOf("雨")>=0||_w[key].s1.indexOf("雪")>=0)?(_w[key].s1.indexOf("雨")>=0?picurl + "xiaoyu.jpg":picurl + "xue.jpg"):picurl + _w[key].f1 + "_baitian.jpg";
-                                        console.log(ff);
                                         that.$viewEl.find(".weather").css("background-image","url(" + ff +")");
                                         img1 = "<img width='70px' height='70px' src='http://php.weather.sina.com.cn/images/yb3/180_180/" + f + "'/>";
                                         $(_td[1]).html( img1);
@@ -95,7 +87,6 @@ define(["jquery", "configurableComponent", 'lib/mustache', 'utils/uiHelper', 'ui
                     that.$configEl.find(".tip-error").css("display","block");
                 }
             });
-        });
     };
 
     return Component.extend({
@@ -127,23 +118,12 @@ define(["jquery", "configurableComponent", 'lib/mustache', 'utils/uiHelper', 'ui
             this.$panel.find(".tip-error").hide();
             this.$panel.delegate(".btn-assist", "click" ,function(){
                 citytq = that.$panel.find("#addr").val();
-                first = false;
-                search(that);
                 that.data["citytq"] = citytq;
-                that.data["first"] = first;
+                search(that);
             });
 
             search(that);
-            this.listen("color", function(ev) {
-                that.data["color"] = ev.target.value;
-                that.renderView();
-                search(that);
-            });
-            this.listen("color2", function(ev) {
-                that.data["color2"] = ev.target.value;
-                that.renderView();
-                search(that);
-            });
+
             this.listen("text_color", function(ev) {
                 that.data["text_color"] = ev.target.value;
                 that.renderView();

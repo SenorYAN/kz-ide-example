@@ -1,7 +1,7 @@
 {
     "title": "天气",
     "font_icon": "&#xe02d;",
-    "html": "<div city=\"{{citytq}}\" first=\"{{first}}\" class=\"weather\" {{_progdata_}} style=\"text-align: center;height: {{height}};color:{{text_color}}; {{_progdata_}}>{{style}}</div>",
+    "html": "<div city=\"{{citytq}}\" class=\"weather\"  style=\"text-align: center;height: {{height}};color:{{text_color}}\">{{style}}</div>",
     "data_config": {
         "height": {
             "type": "string",
@@ -18,10 +18,6 @@
         "citytq":{
             "type": "string",
             "default": "北京"
-        },
-        "first":{
-            "type": "string",
-            "default": "true"
         }
     },
     "widgets": {

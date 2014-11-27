@@ -1,7 +1,7 @@
 {
     "title": "天气",
     "font_icon": "&#xe02d;",
-    "html": "<div city=\"{{citytq}}\" class=\"weather\"  style=\"text-align: center;height: {{height}};color:{{text_color}}\">{{style}}</div>",
+    "html": "<div city=\"{{citytq}}\" class=\"weather\" {{_progdata_}} style=\"text-align: center;height: {{height}};color:{{text_color}}\">{{style}}</div>",
     "data_config": {
         "height": {
             "type": "string",

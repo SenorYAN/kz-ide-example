@@ -1,28 +1,14 @@
 [
   {
-    "eid": "7",
-    "name": "title",
-    "version": "2.0.4",
     "deletable": true,
     "configurable": true,
     "movable": true,
     "value": {
-      "link_res_type": 3,
-      "link_res_id": "7974837436",
-      "title": "标题文字",
-      "margin-left": "",
-      "t4": false,
-      "margin-right": "",
-      "t2": false,
-      "t3": false,
-      "t0": false,
-      "t1": true,
-      "margin-top": "",
-      "link": "",
-      "link_res_name": "首页",
-      "show_link": false,
-      "margin-bottom": ""
+      "height": "180px",
+      "text_color": "#ffffff",
+      "style": "<div class=\"left\" style=\"float:left;text-align: center\"><ul class=\"weather_ul_today\" style=\"list-style: none;font-size: 12px;font-family: 'Microsoft YaHei';\"><li style=\"font-size: 27px\"></li><li></li><li></li><li></li><li></li></ul></div><div class=\"right\" style=\"float:right\"><ul class=\"weather_ul\" style=\"list-style: none;font-size: 13px;font-family: 'Microsoft YaHei';\"><li></li><li></li><li style=\"margin:0;\"></li></ul></div>",
+      "citytq": "北京"
     },
-    "ename": "system_plugin/title"
+    "ename": "demo_plugin/components/weather/"
   }
 ]

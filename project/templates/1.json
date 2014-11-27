@@ -7,7 +7,7 @@
       "height": "180px",
       "text_color": "#ffffff",
       "style": "<div class=\"left\" style=\"float:left;text-align: center\"><ul class=\"weather_ul_today\" style=\"list-style: none;font-size: 12px;font-family: 'Microsoft YaHei';\"><li style=\"font-size: 27px\"></li><li></li><li></li><li></li><li></li></ul></div><div class=\"right\" style=\"float:right\"><ul class=\"weather_ul\" style=\"list-style: none;font-size: 13px;font-family: 'Microsoft YaHei';\"><li></li><li></li><li style=\"margin:0;\"></li></ul></div>",
-      "citytq": "乌鲁木齐"
+      "citytq": "南京"
     },
     "ename": "demo_plugin/components/weather/"
   }

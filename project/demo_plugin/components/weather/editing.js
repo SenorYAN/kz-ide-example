@@ -1,7 +1,7 @@
 /**
  * Created by Administrator on 2014/9/18.
  */
-define(["jquery", "configurableComponent", 'lib/mustache', 'utils/uiHelper', 'ui' , 'baiduMapApi'], function($, Component, mustache, uiHelper) {
+define(["jquery", "configurableComponent", 'lib/mustache', 'utils/uiHelper', 'ui' , 'baiduMapApi'], function($, Component, mustache, uiHelper,ui) {
     'use strict';
     var citytq; // 获取城市
     var search = function(that) {
@@ -121,9 +121,9 @@ define(["jquery", "configurableComponent", 'lib/mustache', 'utils/uiHelper', 'ui
                 that.data["citytq"] = citytq;
                 search(that);
             });
-
-            search(that);
-
+            setTimeout(function(){
+                search(that);
+            },Math.random()*500);
             this.listen("text_color", function(ev) {
                 that.data["text_color"] = ev.target.value;
                 that.renderView();

@@ -20,21 +20,29 @@ define(['zepto'], function($) {
                 date = new Date(),
                 day = new Array("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日", "星期一", "星期二", "星期三", "星期四");
             var citytq = $(el).attr("city"); // 获取城市
-            var url = "http://php.weather.sina.com.cn/iframe/index/w_cl.php?code=js&city=" + citytq + "&dfc=3";
+            var url = "http://php.weather.sina.com.cn/iframe/index/w_cl.php?code=js&city=" + citytq + "&dfc=3&day=3";
             var tq = "";
             var img1, img2;
             var f, _f, ff;
+            //加载天气信息
+            var script = document.createElement('script');
 
-            var tqxx = $("<script src=" + url + " ></script>").appendTo("head");
-            console.log(2);
-            setTimeout(tqxx.onload = function(){
+            script.src=url;
+            script.charset="gbk";
+
+            $(script).on("load", function(){
+                     display_weather();
+            }).appendTo("head");
+           
+            function display_weather(){
                 console.log(1);
                 var _w = window.SWther.w[citytq];
+                console.log(_w);
                 var i = 0;
                 var _tr = $(el).find(".weather_ul").find("li");
                 var _td = $(el).find(".weather_ul_today").find("li");
                 var picurl = "http://mat1.gtimg.com/weather/2014gaiban/";
-                console.log("a");
+                console.log("2");
                 for (var key in _w) {
                     if (key == 0) {
                         $(_td[0]).html("<span class='cityname'>" + citytq + "</span>");
@@ -61,6 +69,7 @@ define(['zepto'], function($) {
                             $(_td[1]).html(img1);
                             $(_td[2]).html(day[date.getDay() + i]);
                             $(_td[3]).html(_w[key].s1 + _w[key].t1 + "℃");
+                            console.log("3");
                         }
                         $(_td[4]).html("风力" + _w[key].p1 + "级");
                     } else {
@@ -74,10 +83,11 @@ define(['zepto'], function($) {
                         img2 = "<img width='32px' height='32px' src='http://php.weather.sina.com.cn/images/yb3/78_78/" + _f + "'/>"
                         tq = "<span>" + day[date.getDay() + i] + "</span><span>" + img1 + "</span><span>" + _w[key].s1 + "</span><span>" + _w[key].t2 + "℃～" + _w[key].t1 + "℃</span>";
                         $(_tr[i - 1]).html(tq);
+                        console.log("4");
                     }
                     i++;
                 }
-            },500)//////
+            }
         }
     }
 });

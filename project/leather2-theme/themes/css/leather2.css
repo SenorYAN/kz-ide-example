@@ -2,6 +2,9 @@
 body{
 }
 
+html{
+    background: #865410;
+}
 .phone-header {
     background: url('../images/top.png') repeat-x;
     background-size: auto 100%;
@@ -137,7 +140,7 @@ body{
 }
 
 .mod-themenav1  a, .mod-themenav2 a{
-	font-size: 15px;
+	font-size: 13px;
     background: none;
     color: #865410;
     border: none;
@@ -199,7 +202,7 @@ body{
 }
 /*按钮*/
 .mod-button{
-    margin: 10px;
+    margin: 10px 3.125%;
 }
 
 .mod-button a{	
@@ -352,7 +355,7 @@ body{
     content: ".";
     font-size: 0px;
     width: 21px;
-    background: url('../images/bt_2_left.png') no-repeat;
+    background: url('../images/bt_2_left1.png') no-repeat;
     background-size: 21px 100%;
     position: absolute;
     left: -2px;
@@ -375,7 +378,7 @@ body{
     content: ".";
     font-size: 0px;
     width: 21px;
-    background: url('../images/bt_5_left.png') no-repeat;
+    background: url('../images/bt_5_left1.png') no-repeat;
     background-size: 21px 100%;
     position: absolute;
     left: -2px;
@@ -386,7 +389,7 @@ body{
     content: ".";
     font-size: 0px;
     width: 21px;
-    background: url('../images/bt_5_right.png') no-repeat;
+    background: url('../images/bt_5_right1.png') no-repeat;
     background-size: 21px 100%;
     position: absolute;
     right: -2px;
@@ -557,7 +560,7 @@ body{
 .mod-title {
     height: 35px;
     overflow: hidden;
-    margin: 10px 10px !important;
+    margin: 10px 3.125% !important;
 }
 
 .mod-title h2{
@@ -643,7 +646,9 @@ body{
 }
 
 .article-hd{
-    padding: 14px;
+    margin:10px 3.125% 0 3.125%;
+    width: auto;
+    padding: 15px 10px 10px 10px;
 }
 
 .article-hd .mod-title.t0 h2{
@@ -651,16 +656,15 @@ body{
     padding-left:0px !important;
     background: none;
     overflow:hidden;
-    line-height:1.5;
     margin: 0px;
-    font-size: 22px;
+    font-size:15px;
 }
 
 .article-hd .mod-title.t0{
     background:none;
-    margin-left:0px;
     height:auto;
     min-height: 0px;
+    margin: 0px !important;
 }
 
 .article-hd .mod-title.t0:before{
@@ -680,7 +684,7 @@ body{
 }
 
 .article-hd h2{
-    color: #ffffff !important;
+    color: #515151 !important;
 }
 
 .article-bd, .article-content{
@@ -688,26 +692,20 @@ body{
 }
 
 .article-hd .mod-text{
-    margin: 6px 0px 0px 0px;
-    color: #797979;
-
+    margin: 0px;
+    font-size: 13px;
+    color: #9b9b9b;
 }
 
 .article-content .mod-text{
-    padding:14px !important;
-}
-
-.article-hd{
-    border-bottom: 1px solid #000000 !important;
-}
-.article-bd{
-    border-top: 1px solid #515151 !important;
+    padding:10px 3.125% 15px 3.125% !important;
+    background: #ffffff !important;
+    margin-top: 0px !important;
 }
 
 .mod-title.t4 {
 	min-height:35px;
     position: relative;
-    /*margin:0px;*/
     border-bottom:1px solid #945711;
     padding:0px;
 }
@@ -777,7 +775,7 @@ body{
     color:#fff;
     padding: 0px;
     background: #ffffff;
-    margin: 10px;
+    margin: 10px 3.125%;
 }
 
 .mod-pictxt ul{
@@ -864,7 +862,7 @@ body{
     position: relative;
     text-align:center;
     text-align:left;
-    margin: 0 10px;
+    margin: 0 3.125%;
     padding: 10px;
     background: #ffffff;
     border-bottom: 1px solid #ececec;
@@ -890,10 +888,16 @@ body{
     background: #ffffff;
 }
 
-.mod-picgroup .pic-gp3{
+.mod-picgroup .pic-gp3 li:nth-child(n+4) {
+    margin-top: 3.125% !important;
 }
 
-.mod-picgroup .pic-gp2{
+.mod-picgroup .pic-gp2 li:nth-child(n+3){
+    margin-top: 3.125% !important;
+}
+
+.mod-picgroup .pic-gp1 li:nth-child(n+2){
+    margin-top: 3.125% !important;
 }
 
 /*图集下：两列布局三列布局*/
@@ -917,7 +921,7 @@ body{
 /*组图（焦点图）*/
 .mod-focus {
     position: relative;
-    margin: 10px 10px;
+    margin: 10px 3.125%;
 }
 
 .mod-focus .swipe-wrap p{
@@ -963,12 +967,14 @@ body{
     position: relative;
     padding: 10px;
     background: #ffffff;
-    margin: 10px;
+    margin: 10px 3.125%;
     font-size: 13px;
     line-height: 18px;
 }
 
 .mod-text >p{
+    margin: 0 0 15px 0;
+    text-indent: 0em;
 }
 
 /*配置窗口的文本组件*/
@@ -1044,7 +1050,7 @@ body{
     position: relative;
     background: #ffffff;
 	padding:10px;
-    margin: 10px;
+    margin: 10px 3.125%;
 }
 
 .mod-form .crow-form-box p{
@@ -1059,7 +1065,7 @@ body{
 /*分享组件*/
 .mod-share {
     font-size: 15px;
-    margin: 10px 10px;
+    margin: 10px 3.125%;
     padding: 12.5px 0px !important;
     text-align: center;
     background: #a16b16;
@@ -1131,7 +1137,7 @@ body{
 }
 
 .mod-layout_floor{
-    background:transparent;
+    background:#ffffff;
 	border:none;
 }
 
@@ -1142,11 +1148,12 @@ body{
 }
 
 .mod-themenav4 .dropbox{
-    width:327.2727272727%;
-    max-width: 108px;
-    right:8px;
-    top:44px;
+    width:393.93939393%;
+    max-width: 130px;
+    right:5px;
+    top:55px;
     box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.55);
+    border:1px solid #cecece;
 }
 
 .mod-themenav4 .font-ico{
@@ -1154,24 +1161,23 @@ body{
 }
 
 .mod-themenav4 .dropbox li{
-	height:45px;
-	line-height:45px;
-	font-size:15px;
-    margin: 0px 8px;
-    border-top: 1px solid #515153;
-    border-bottom: 1px solid #000000;
+	height:30px;
+	line-height:30px;
+	font-size:13px;
+    border-top: 1px solid #cecece;
 }
 
 .mod-themenav4 .dropbox ul{
-    background: rgba(34,34,34,0.92);
+    background: #ffffff;
+    border-radius: 4px;
 }
 
 .mod-themenav4 .dropbox li a{
-    color:#d0d0d0;
+    color:#865410;
     display: block;
     overflow: hidden;
     text-overflow:ellipsis;
-    height: 44px;
+    height: 30px;
 }
 
 .mod-themenav3 .dropbox li:first-child, .mod-themenav4 .dropbox li:first-child{
@@ -1183,33 +1189,33 @@ body{
 }
 
 .mod-themenav4 .dropbox li .cur a{
-    color:#d0d0d0;
+    color:#865410;
 }
 
 /*右上小箭头*/
 .mod-themenav4 .ico-arrow{
-    position:absolute; top: -10px; right: 5px; width: 12px; height:8px; padding:0;
+    position:absolute; top: -8px; right: 10px; width: 12px; height:8px; padding:0;
 }
 
 .mod-themenav4 .ico-arrow-bd{
-    border-color: transparent transparent rgba(42,42,42,0.92) transparent;
-    border-style: solid;
-    border-width: 5px;
-    position:absolute; 
-    right:0px;
+    background: url('../images/arrow_drop.png') no-repeat;
+    background-size: 100% 100%;
+    height: 8px;
+    width: 15px;
+    border: 0px;
 }
 
 /*480时小箭头的位置*/
 @media screen and (min-width:479px){
     .mod-themenav4 .ico-arrow{
-        position:absolute; top: -8px; right: 2.75%; width: 3.5%; height:18px; padding:0;
+        position:absolute; top: -8px; right: 17px; width: 3.5%; height:18px; padding:0;
     }
     .mod-themenav4 .ico-arrow-bd{
-        border-color: transparent transparent rgba(42,42,42,0.92) transparent;
-        border-style: solid;
-        border-width: 8px;
-        position:absolute; 
-        right:0px;
+    background: url('../images/arrow_drop.png') no-repeat;
+    background-size: 100% 100%;
+    height: 8px;
+    width: 15px;
+    border: 0px;
     }
 }
 
@@ -1218,11 +1224,11 @@ body{
         position:absolute; top: -6px; right: 3%; width: 3%; height:18px; padding:0;
     }
     .mod-themenav4 .ico-arrow-bd{
-        border-color: transparent transparent rgba(42,42,42,0.92) transparent;
-        border-style: solid;
-        border-width: 8px;
-        position:absolute; 
-        right:0px;
+    background: url('../images/arrow_drop.png') no-repeat;
+    background-size: 100% 100%;
+    height: 8px;
+    width: 15px;
+    border: 0px;
     }
 }
 
@@ -1233,36 +1239,34 @@ body{
         margin-left: 6px;
     }
 }
+
 /*平铺下遮挡型主导式样*/
 .mod-themenav3 .font-ico{
-	margin-right: 21px;
-    color: #9b9b9b;
+	margin: 8px 10px 0 0;
+    color: #865410;
 }
 
 .mod-themenav3 ul{
-    background: rgba(34,34,34,0.92);
-    border-top: 1px solid #000000 !important;
-    border-bottom: 1px solid #515153 !important;
+    background: #ffffff;
 }
 
 .mod-themenav3 li{    
-    height: 50px;
-    line-height: 50px;
-    border-top: 1px solid #515153 !important;
-    border-bottom: 1px solid #000000 !important;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #cecece;
 }
 
 .mod-themenav3  li a{
-    color:#9b9b9b;
+    color:#865410;
     font-size: 15px;
-    height: 50px;
-    line-height: 50px;
+    height: 30px;
+    line-height: 30px;
 }
 
 .mod-themenav3  li .cur a{
     font-size: 15px;
-    height: 50px;
-    line-height: 50px;
+    height: 30px;
+    line-height: 30px;
 }
 
 /*分割线*/
@@ -1297,7 +1301,7 @@ body{
 }
 
 .forumlist-mod .item .forum-content .forum-header .forum-title{
-    color: #dddddd;
+    color: #515151;
 }
 
 .forumlist-mod .item .forum-content .forum-header .today-count{
@@ -1309,7 +1313,7 @@ body{
 }
 
 .item-title{
-    color: #dddddd;
+    color: #515151;
 }
 
 .mod-shop-item span{
@@ -1343,10 +1347,10 @@ body{
 
 .mod-shop-more{
     background: #ffffff;
-    margin:0 10px;
+    margin:-10px 3.125% 10px 3.125%;
 }
 .mod-shop{
-    margin: 10px;
+    margin: 10px 3.125%;
     width: auto !important;
     background: #ffffff;
 }
@@ -1366,7 +1370,7 @@ body{
 
 .mod.forumlist-mod {
     background: #ffffff;
-    margin: 10px;
+    margin: 10px 3.125%;
 }
 
 
@@ -1375,12 +1379,19 @@ body{
     width: 78.125%;
 }
 
+/*文章详情页图片*/
 .article-content .mod-picone{
-    margin-bottom: 0px;
+    margin:0 3.125%;
+    padding: 0 3.125%;
 }
 /*二维码*/
 .mod-qrcode{
     background: #ffffff;
     padding: 10px;
-    margin: 10px;
+    margin: 10px 3.125%;
+}
+
+body .ui-type-select ul.type-ul li.type-li .option{
+    margin-right: 5px;
+    background: #865410;
 }

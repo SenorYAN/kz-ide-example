@@ -780,6 +780,10 @@ body {
     background: url("../images/sohu.png") no-repeat;
     background-size: 100% 100%;
 }
+.mod-share .douban {
+    background: url("../images/douban.png") no-repeat;
+    background-size: 100% 100%;
+}
 
 /* 双栏组件 */
 .mod-layout2coloums {

@@ -15,79 +15,76 @@ define(['zepto'], function($) {
                 }
                 return intLength;
             };
-
+            var c2e ={
+                "晴":"qing",
+                "阴":"yin",
+                "雪":"xue",
+                "雨":"yu",
+                "雾":"wu",
+                "霾":"mai",
+                "多云":"duoyun"
+            };
             var that = this,
                 date = new Date(),
                 day = new Array("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日", "星期一", "星期二", "星期三", "星期四");
             var citytq = $(el).attr("city"); // 获取城市
-            var url = "http://php.weather.sina.com.cn/iframe/index/w_cl.php?code=js&city=" + citytq + "&dfc=3&day=3";
+            var url = "http://maoyan_test.jd-app.com/index.php?city="+citytq;
             var tq = "";
             var img1, img2;
-            var f, _f, ff;
+            var f1,f2;
             //加载天气信息
-            var script = document.createElement('script');
-
-            script.src=url;
-            script.charset="gbk";
-
-            $(script).on("load", function(){
-                     display_weather();
-            }).appendTo("head");
-           
-            function display_weather(){
-                console.log(1);
-                var _w = window.SWther.w[citytq];
-                console.log(_w);
-                var i = 0;
-                var _tr = $(el).find(".weather_ul").find("li");
-                var _td = $(el).find(".weather_ul_today").find("li");
-                var picurl = "http://mat1.gtimg.com/weather/2014gaiban/";
-                console.log("2");
-                for (var key in _w) {
-                    if (key == 0) {
-                        $(_td[0]).html("<span class='cityname'>" + citytq + "</span>");
-                        if (DataLength(citytq) > 3) {
-                            $(el).find(".weather_ul_today li:nth-child(1)").css({
-                                "font-size": "20px",
-                                "height": "40px",
-                                "line-height": "50px"
-                            });
-                        }
-                        if (new Date().getHours() > 17) {
-                            f = _w[key].f2 + "_1.png";
-                            ff = (_w[key].s2.indexOf("雨") >= 0 || _w[key].s2.indexOf("雪") >= 0) ? (_w[key].s2.indexOf("雨") >= 0 ? picurl + "xiaoyu.jpg" : picurl + "xue.jpg") : picurl + _w[key].f2 + "_yejian.jpg";
-                            $(el).css("background-image", "url(" + ff + ")");
-                            img1 = "<img width='70px' height='70px' src='http://php.weather.sina.com.cn/images/yb3/180_180/" + f + "'/>";
-                            $(_td[1]).html(img1);
-                            $(_td[2]).html(day[date.getDay() + i]);
-                            $(_td[3]).html(_w[key].s2 + _w[key].t2 + "℃");
-                        } else {
-                            f = _w[key].f1 + "_0.png";
-                            ff = (_w[key].s1.indexOf("雨") >= 0 || _w[key].s1.indexOf("雪") >= 0) ? (_w[key].s1.indexOf("雨") >= 0 ? picurl + "xiaoyu.jpg" : picurl + "xue.jpg") : picurl + _w[key].f1 + "_baitian.jpg";
-                            $(el).css("background-image", "url(" + ff + ")");
-                            img1 = "<img width='70px' height='70px' src='http://php.weather.sina.com.cn/images/yb3/180_180/" + f + "'/>";
-                            $(_td[1]).html(img1);
-                            $(_td[2]).html(day[date.getDay() + i]);
-                            $(_td[3]).html(_w[key].s1 + _w[key].t1 + "℃");
-                            console.log("3");
-                        }
-                        $(_td[4]).html("风力" + _w[key].p1 + "级");
-                    } else {
-                        f = _w[key].f1 + "_0.png";
-                        _f = _w[key].f2 + "_0.png";
-                        if (new Date().getHours() > 17) {
-                            f = _w[key].f1 + "_1.png";
-                            _f = _w[key].f2 + "_1.png";
-                        }
-                        img1 = "<img width='32px' height='32px' src='http://php.weather.sina.com.cn/images/yb3/78_78/" + f + "'/>";
-                        img2 = "<img width='32px' height='32px' src='http://php.weather.sina.com.cn/images/yb3/78_78/" + _f + "'/>"
-                        tq = "<span>" + day[date.getDay() + i] + "</span><span>" + img1 + "</span><span>" + _w[key].s1 + "</span><span>" + _w[key].t2 + "℃～" + _w[key].t1 + "℃</span>";
-                        $(_tr[i - 1]).html(tq);
-                        console.log("4");
+            $.ajax({/////////////////
+                url: url,
+                scriptCharset: "utf-8",
+                type: "get",
+                dataType: "json",
+                success: function(data) {
+                    console.log(data);               
+                    var _w = data.results[0]["weather_data"];
+                    console.log(_w);
+                    var i = 0;
+                    var _tr = $(el).find(".weather_ul").find("li");
+                    var _td = $(el).find(".weather_ul_today").find("li");
+                    var picurl = "http://mat1.gtimg.com/weather/2014gaiban/";
+                    $(_td[0]).html("<span>" + citytq + "</span>");
+                    if (DataLength(citytq) > 3) {
+                        $(el).find(".weather_ul_today li:nth-child(1)").css({
+                            "font-size": "20px",
+                            "height": "40px",
+                            "line-height": "50px"
+                        });
                     }
-                    i++;
-                }
+                    for (var key in _w) {
+                        img1 = "<img src="+ _w[key]["dayPictureUrl"] +"/>";
+                        img2 = "<img src="+ _w[key]["nightPictureUrl"] +"/>";
+                        if (key == 0) {
+                            if(_w[key]["weather"].indexOf("雨") >= 0||_w[key]["weather"].indexOf("雪") >= 0){
+                                f1 = picurl+ "xue.png";
+                                f2 = picurl+ "xue.png";
+                            }else{
+                                f1 = picurl + c2e[_w[key]["weather"]] + "_baitan.png";
+                                f2 = picurl + c2e[_w[key]["weather"]] + "_yejian.png";
+                            }
+                            console.log(f1);
+                            if (new Date().getHours() < 18) {
+                                $(_td[1]).html(img1);
+                                $(el).css("background-image", "url(" + f1 + ")");
+                            }else{
+                                $(_td[1]).html(img2);
+                                $(el).css("background-image", "url(" + f2 + ")");
+                            }
+                            $(_td[2]).html(day[date.getDay() + i]);
+                            $(_td[3]).html(_w[key]["weather"]);
+                            $(_td[4]).html(_w[key]["temperature"]);
+                            }
+                            else{
+                                tq = "<span>" + day[date.getDay() + i] + "</span><span>" + img1 + "</span><span>" + _w[key]["temperature"] + "</span>";
+                                $(_tr[key - 1]).html(tq);                                    
+                            }
+                            i++;
+                    }
             }
+        });
         }
     }
 });

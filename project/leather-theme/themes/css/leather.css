@@ -22,7 +22,6 @@ body{
 }
 
 .site-logo .mod-pic,.site-logo .mod-pic a,.site-logo .mod-pic a img{
-	height:100%;
 }
 
 .mod-pic img{
@@ -972,6 +971,9 @@ line-height:50px;
 }
 
 .mod-share .douban {
+    background:url("../images/share.png") no-repeat;
+    background-size: 234px 94px;
+    background-position: -117px 0px;
 }
 
 .mod-share .qqweibo {

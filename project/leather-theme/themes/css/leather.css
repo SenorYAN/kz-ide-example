@@ -1096,9 +1096,9 @@ line-height:50px;
 
 @media screen and (max-width:270px){
     .mod-share a{
-        width: 37px;
-        height: 37px;
-        margin-left: 6px;
+        width: 38px;
+        height: 38px;
+        margin-left: 2px;
     }
 }
 /*平铺下遮挡型主导式样*/

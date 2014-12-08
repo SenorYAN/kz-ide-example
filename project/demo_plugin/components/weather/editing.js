@@ -5,6 +5,7 @@ define(["jquery", "configurableComponent", 'lib/mustache', 'utils/uiHelper', 'ui
     'use strict';
     var citytq; // 获取城市
     var search = function(that) {
+        console.log(that.$viewEl.html());
         var date = new Date();
         var day = new Array("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日", "星期一", "星期二", "星期三", "星期四");
         var c2e ={

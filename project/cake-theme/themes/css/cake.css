@@ -949,6 +949,12 @@ line-height:30px;
     height: 45px;
 }
 
+@media screen and (max-width:270px){
+    .mod-share a{
+        margin-left: 0px;
+    }
+}
+
 .mod-share .qzone {
     background:url("../images/icon_share_qzone.png") no-repeat;
     background-size: 100% 100%;
@@ -965,13 +971,16 @@ line-height:30px;
 }
 
 .mod-share .douban {
+    background:url("../images/icon_share_douban.png") no-repeat;
+    background-size: 100% 100%;
 }
 
 .mod-share .qqweibo {
 }
 
 .mod-share .sohu{
-    display:none;
+    background:url("../images/icon_share_sohuweibo.png") no-repeat;
+    background-size: 100% 100%;
 }
 
 /*双栏组件*/

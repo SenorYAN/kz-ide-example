@@ -11,6 +11,9 @@ body{
     box-shadow:none;
     background:transparent;
 }
+.site-title .mod-text>p{
+    color: #422f24;
+}
 .phone-header .cell{
 	min-height: 1px;
 }
@@ -684,7 +687,6 @@ body{
     padding: 10px;
     background: #ffffff;
     border-bottom: 1px solid #ececec;
-    box-shadow: 0px 1px 4px rgba(0,0,0,.4);
     border-radius: 2px;
 }
 .configurator .mod-link.t3{
@@ -861,6 +863,7 @@ body{
     padding: 12.5px 0px !important;
     text-align: center;
     background: #a16b16;
+    box-shadow: 0px 1px 4px rgba(0,0,0,.4);
 }
 .mod-share .hd{
     background: none;
@@ -1077,7 +1080,6 @@ body{
 /*门店列表*/
 .mod-shop-more-i{
     background: url(../images/drop.png) !important;
-    box-shadow: 0px 1px 4px rgba(0,0,0,.4);
     border-radius: 2px;
 }
 .mod-shop-more{

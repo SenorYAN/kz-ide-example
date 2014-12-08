@@ -979,7 +979,13 @@ body {
     color:#bfbfbf;
 }
 .forumlist-mod .item .forum-content{
-    border-bottom:1px solid #7d7d7d;
+    border-bottom:1px solid #73787e;
+}
+.forumlist-mod .item .forum-content .forum-header .forum-title{
+    color: #0ca8e3;
+}
+.forumlist-mod .item .forum-content .forum-footer .already-join{
+    color: #e6ebea;
 }
 .mod-pictxt .mod-button a{
     color: #00444a;

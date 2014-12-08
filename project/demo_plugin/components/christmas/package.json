@@ -1,0 +1,30 @@
+{
+    "title": "圣诞节",
+    "image_icon": "http://pic.kuaizhan.com/g2/M00/04/49/CgpQVFSEUW-AbB-bAAA9O4v00hM2564930",
+    "font_icon": "&#xe02d;",
+    "html": "<div {{_progdata_}} class=\"mod mod-christmas\" style=\"\"><div class=\"mod-christmas-content\" style=\"height:{{height}}\"><div class=\"mod-christmas-share\"><div class=\"mod-christmas-share-top\"><span>分享到：</span><a data-role=\"qq\"></a><a data-role=\"renren\"></a><a data-role=\"sina\"></a><a data-role=\"douban\"></a></div><textarea></textarea><div class=\"mod-christmas-share-footer\"><a class=\"submit-button\">分享</a></div></div><div class=\"logo\"></div></div></div>",
+    "data_config": {
+        "height": {
+            "type": "string",
+            "required": true,
+            "default": "100%"
+        }
+    },
+    "widgets": {
+        "style": [
+            {
+                "label": "高度",
+                "type": "slider",
+                "opt": {
+                    "name":"height",
+                    "min": 0,
+                    "max": 100,
+                    "unit": "%"
+                },
+                "data_name":"height"
+            }
+        ],
+        "property": [
+        ]
+    }
+}

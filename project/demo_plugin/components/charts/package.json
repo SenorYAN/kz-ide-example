@@ -1,0 +1,30 @@
+{
+    "title": "统计图表",
+    "image_icon": "http://pic.kuaizhan.com/g2/M01/04/73/wKjmqlSGbNOADhfdAAAK5NVhG904985796",
+    "font_icon": "&#xe02d;",
+    "html": "<div class=\"mod mod-charts\" {{_progdata_}} style=\"\"></div>",
+    "data_config": {
+        "height": {
+            "type": "string",
+            "required": true,
+            "default": "100%"
+        }
+    },
+    "widgets": {
+        "style": [
+            {
+                "label": "高度",
+                "type": "slider",
+                "opt": {
+                    "name":"height",
+                    "min": 0,
+                    "max": 100,
+                    "unit": "%"
+                },
+                "data_name":"height"
+            }
+        ],
+        "property": [
+        ]
+    }
+}

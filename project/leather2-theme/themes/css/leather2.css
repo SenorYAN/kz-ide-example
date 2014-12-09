@@ -184,7 +184,7 @@ body{
     background-size: 2px 100%;
     color: #ffffff;
     position: relative;
-    border-radius: 2px;
+    border-radius: 4px;
 }
 .btn-highlight::before{
     content: ".";
@@ -193,7 +193,7 @@ body{
     background: url('../images/bt_3_left.png') no-repeat;
     background-size: 5px 100%;
     position: absolute;
-    left: -1px;
+    left: 0px;
     top: 0px;
 }
 .btn-highlight::after{
@@ -203,14 +203,14 @@ body{
     background: url('../images/bt_3_right.png') no-repeat;
     background-size: 5px 100%;
     position: absolute;
-    right: -1px;
+    right: 0px;
     top: 0px;
 }.btn-highlight-theme{
     background: url('../images/bt_4_middle.png') repeat-x;
     background-size: 10px 100%;
     color: #515151;
     position: relative;
-    border-radius: 2px;
+    border-radius: 4px;
 }
 .btn-highlight-theme::before{
     content: ".";
@@ -219,7 +219,7 @@ body{
     background: url('../images/bt_4_left.png') no-repeat;
     background-size: 14px 100%;
     position: absolute;
-    left: -1px;
+    left: 0px;
     top: 0px;
 }
 .btn-highlight-theme::after{
@@ -229,7 +229,7 @@ body{
     background: url('../images/bt_4_right.png') no-repeat;
     background-size: 14px 100%;
     position: absolute;
-    right: -1px;
+    right: 0px;
     top: 0px;
 }
 .btn-flat{
@@ -237,7 +237,7 @@ body{
     background-size: 10px 100%;
     color: #515151;
     position: relative;
-   border-radius: 2px;
+   border-radius: 4px;
 }
 .btn-flat::before{
     content: ".";
@@ -246,7 +246,7 @@ body{
     background: url('../images/bt_1_left.png') no-repeat;
     background-size: 14px 100%;
     position: absolute;
-    left: -1px;
+    left: 0px;
     top: 0px;
 }
 .btn-flat::after{
@@ -256,7 +256,7 @@ body{
     background: url('../images/bt_1_right.png') no-repeat;
     background-size: 14px 100%;
     position: absolute;
-    right: -1px;
+    right: 0px;
     top: 0px;
 }
 .btn-flat-theme{
@@ -318,7 +318,7 @@ body{
     background-size: 2px 100%;
     color: #515151;
     position: relative;
-    border-radius: 2px;
+    border-radius: 4px;
 }
 .btn-gradient-theme::before{
     content: ".";
@@ -327,7 +327,7 @@ body{
     background: url('../images/bt_6_left.png') no-repeat;
     background-size: 5px 100%;
     position: absolute;
-    left: -1px;
+    left: 0px;
     top: 0px;
 }
 .btn-gradient-theme::after{
@@ -337,7 +337,7 @@ body{
     background: url('../images/bt_6_right.png') no-repeat;
     background-size: 5px 100%;
     position: absolute;
-    right: -1px;
+    right: 0px;
     top: 0px;
 }
 /*
@@ -541,6 +541,9 @@ body{
     color: #9b9b9b;
     margin-top: 6px;
 }
+.article-bd .mod-share{
+    box-shadow: 0px 1px 4px rgba(0,0,0,.4) !important;
+}
 .article-content .mod-text{
     padding:10px 3.125% 15px 3.125% !important;
     background: #ffffff !important;
@@ -579,7 +582,7 @@ body{
 }.mod-title.t0:before{
     content: " ";
     position: absolute;
-    left: 0;
+    left: -2px;
     width: 8px;
     height: 35px;
     display: inline-block;
@@ -589,7 +592,7 @@ body{
 .mod-title.t0:after{
     content: ".";
     position: absolute;
-    right: 0;
+    right: -2px;
     width: 8px;
     height: 35px;
     color: transparent;
@@ -687,7 +690,6 @@ body{
     padding: 10px;
     background: #ffffff;
     border-bottom: 1px solid #ececec;
-    border-radius: 2px;
 }
 .configurator .mod-link.t3{
     text-align:left; 
@@ -911,12 +913,10 @@ body{
 /*双栏组件*/
 .mod-layout2coloums {
     position: relative;
-    padding: 10px;
 }
 .mod-layout2coloums .mod,
 .mod-layout_floor .mod {
     box-shadow: none;
-    border: none;
 }
 .mod-layout_floor{
     background:#ffffff;
@@ -1095,12 +1095,17 @@ body{
 }
 /*社区列表*/
 .forumlist-mod .more-forums .add-more{
-    width: 60%;
-    margin: 0 auto;
-    background: url(../images/button1.png);
-    background-size: 100% 100%;
-    border: none;
-    color: #d8a12b;
+    height: 25px;
+    line-height: 25px;
+    border: 1px solid #dcdcdc;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 59.6875%;
+    overflow: visible;
+    margin-left: auto;
+    margin-right: auto;
+    color: #9b9b9b;
+    border-radius: 4px;
 }
 .forumlist-mod .last .forum-content{
     border-bottom: 0px !important;
@@ -1119,6 +1124,7 @@ body{
 .article-content .mod-picone{
     margin:0 3.125%;
     padding: 0 3.125%;
+    border-radius: 0px;
 }/*二维码*/
 .mod-qrcode{
     background: #ffffff;

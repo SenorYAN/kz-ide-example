@@ -1,0 +1,191 @@
+{
+    "eid": "4",
+    "version": "1.0",
+    "title": "导航",
+    "name": "nav",
+    "image_icon": "",
+    "font_icon": "&#xe043;",
+    "category": 2,
+    "html": "<div class=\"mod mod-nav mod-nav-{{nav_theme}} {{nav_theme}}\"  {{_progdata_}} style='margin:{{margin-top}} {{margin-right}} {{margin-bottom}} {{margin-left}};'><ul>{{#items}}<li style=\"width:{{width}}\"><a href=\"{{link}}\" title=\"{{title}}\">{{title}}</a><i></i></li>{{/items}}</ul></div>",
+    "data_config": {
+        "nav_theme": {
+            "type": "enum",
+            "required": true,
+            "default": "theme1",
+            "category": "style",
+            "widget": {
+                "label": "",
+                "type": "typeselect",
+                "category": "content",
+                "opt": {
+                    "options": [
+                        {
+                            "cur": true,
+                            "value": "t1",
+                            "content": "<div class='mod-nav t1'><ul><li><a href='javascript:;'>头条</a></li><li><a href='javascript:;'>体育</a></li><li><a href='javascript:;'>娱乐</a></li><li><a href='javascript:;'>财经</a></li><li><a href='javascript:;'>科技</a></li></ul></div>"
+                        },
+                        {
+                            "value": "t2",
+                            "content": "<div class='mod-nav t2'><ul><li><a href='javascript:;'>头条</a></li><li><a href='javascript:;'>体育</a></li><li><a href='javascript:;'>娱乐</a></li><li><a href='javascript:;'>财经</a></li><li><a href='javascript:;'>科技</a></li></ul></div>"
+                        },
+                        {
+                            "value": "t3",
+                            "content": "<div class='mod-nav t3'><ul><li><a href='javascript:;'>头条</a></li><li><a href='javascript:;'>体育</a></li><li><a href='javascript:;'>娱乐</a></li><li><a href='javascript:;'>财经</a></li><li><a href='javascript:;'>科技</a></li></ul></div>"
+                        }
+                    ]
+                },
+                "data_name": "nav_theme"
+            },
+            "vd_rules": {
+                "expect": {
+                    "values": [
+                        "t1",
+                        "t2",
+                        "t3"
+                    ]
+                }
+            }
+        },
+        "items": {
+            "type": "array",
+            "required": true,
+            "default": [
+                {
+                    "title": "导航1",
+                    "width": "25%",
+                    "link": "javascript:;",
+                    "link_res_type": 3,
+                    "link_res_id": 0,
+                    "link_res_name": ""
+                },
+                {
+                    "title": "导航2",
+                    "width": "25%",
+                    "link": "javascript:;",
+                    "link_res_type": 3,
+                    "link_res_id": 0,
+                    "link_res_name": ""
+                },
+                {
+                    "title": "导航3",
+                    "width": "25%",
+                    "link": "javascript:;",
+                    "link_res_type": 3,
+                    "link_res_id": 0,
+                    "link_res_name": ""
+                },
+                {
+                    "title": "导航4",
+                    "width": "25%",
+                    "link": "javascript:;",
+                    "link_res_type": 3,
+                    "link_res_id": 0,
+                    "link_res_name": ""
+                }
+            ],
+            "category": "property",
+            "widget": {
+                "label": "",
+                "type": "grouplink",
+                "category": "content",
+                "opt": {
+                    "min": 2,
+                    "max": 10
+                },
+                "data_name": "items"
+            },
+            "vd_rules": {}
+        },
+        "margin-top": {
+            "type": "string",
+            "required": false,
+            "category": "style",
+            "widget": {
+                "type": "switchrow",
+                "label": "调整边距",
+                "opt": {
+                    "name": "chk_margin",
+                    "content": {
+                        "type": "margin"
+                    }
+                },
+                "data_name": "margin-top"
+            }
+        },
+        "margin-right": {
+            "type": "string",
+            "required": false,
+            "category": "style"
+        },
+        "margin-bottom": {
+            "type": "string",
+            "required": false,
+            "category": "style"
+        },
+        "margin-left": {
+            "type": "string",
+            "required": false,
+            "category": "style"
+        }
+    },
+    "seq": "9",
+    "widgets": {
+        "style": [
+            {
+                "label": "",
+                "type": "typeselect",
+                "category": "content",
+                "opt": {
+                    "options": [
+                        {
+                            "cur": true,
+                            "value": "t1",
+                            "content": "<div class='mod-nav t1'><ul><li><a href='javascript:;'>头条</a></li><li><a href='javascript:;'>体育</a></li><li><a href='javascript:;'>娱乐</a></li><li><a href='javascript:;'>财经</a></li><li><a href='javascript:;'>科技</a></li></ul></div>"
+                        },
+                        {
+                            "value": "t2",
+                            "content": "<div class='mod-nav t2'><ul><li><a href='javascript:;'>头条</a></li><li><a href='javascript:;'>体育</a></li><li><a href='javascript:;'>娱乐</a></li><li><a href='javascript:;'>财经</a></li><li><a href='javascript:;'>科技</a></li></ul></div>"
+                        },
+                        {
+                            "value": "t3",
+                            "content": "<div class='mod-nav t3'><ul><li><a href='javascript:;'>头条</a></li><li><a href='javascript:;'>体育</a></li><li><a href='javascript:;'>娱乐</a></li><li><a href='javascript:;'>财经</a></li><li><a href='javascript:;'>科技</a></li></ul></div>"
+                        }
+                    ]
+                },
+                "data_name": "nav_theme"
+            },
+            {
+                "type": "switchrow",
+                "label": "调整边距",
+                "opt": {
+                    "name": "chk_margin",
+                    "content": {
+                        "type": "margin"
+                    }
+                },
+                "data_name": "margin-top"
+            }
+        ],
+        "property": [
+            {
+                "label": "",
+                "type": "grouplink",
+                "category": "content",
+                "opt": {
+                    "min": 2,
+                    "max": 10
+                },
+                "data_name": "items"
+            },
+            {
+                "data_name": "margin-right"
+            },
+            {
+                "data_name": "margin-bottom"
+            },
+            {
+                "data_name": "margin-left"
+            }
+        ]
+    }
+}

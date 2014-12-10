@@ -1,7 +1,7 @@
 /*
  组件类定义。
  */
-define(['jquery', 'configurableComponent','lib/mustache','utils/uiHelper','highcharts'], function($, Component,mustache,uiHelper,highcharts) {
+define(['jquery', 'configurableComponent','lib/mustache','utils/uiHelper'], function($, Component,mustache,uiHelper) {
     'use strict';
     //初始化组件类，参数为组件配置，如果组件第一次创建，将传递空配置，如果组件为已经创建到视图窗口，重新加载，将传递已保存的配置
     var showdata = function(that){

@@ -16,13 +16,17 @@ define(['zepto'], function($) {
                 return intLength;
             };
             var c2e ={
-                "晴":"qing",
-                "阴":"yin",
-                "雪":"xue",
-                "雨":"yu",
-                "雾":"wu",
-                "霾":"mai",
-                "多云":"duoyun"
+                "晴":"http://pic.kuaizhan.com/g1/M00/04/7F/CgpQU1SH8d-ABrh-ADy6C3fZ9_E6786818",
+                "晴1":"http://pic.kuaizhan.com/g2/M01/04/98/CgpQVFSH8cGAQ8smADy6A_Tvl2o1441658",
+                "阴":"http://pic.kuaizhan.com/g2/M01/04/98/CgpQVFSH8cyAbiYDADy6CxhCIDU8953536",
+                "阴1":"http://pic.kuaizhan.com/g1/M00/04/80/CgpQU1SH8guAakvgADy9MSBpdYc1354708",
+                "雾":"http://pic.kuaizhan.com/g1/M01/04/7F/wKjmqVSH8fiAPQsKADy6C9psOgU1848622",
+                "雾1":"http://pic.kuaizhan.com/g2/M00/04/9B/wKjmqlSH8cWAPcFyABAv-XSEIgo9575528",
+                "霾":"http://pic.kuaizhan.com/g2/M00/04/98/CgpQVFSH8buADbMIADy6C-sQ9-c1901748",
+                "多云":"http://pic.kuaizhan.com/g1/M01/04/80/wKjmqVSH8siAWnIqADy6C-S5Vno5722817n",
+                "多云1":"http://pic.kuaizhan.com/g1/M00/04/80/CgpQU1SH8s2AdVsLADy9MZMfacI9327473",
+                "雨":"http://pic.kuaizhan.com/g2/M01/04/9B/wKjmqlSH8ciAEa83ADy6C6E0Go02497097",
+                "雪":"http://pic.kuaizhan.com/g1/M01/04/7F/wKjmqVSH8geAX_vPADy6C8KGXJw6351521"
             };
             var that = this,
                 date = new Date(),
@@ -58,13 +62,20 @@ define(['zepto'], function($) {
                         img1 = "<img src="+ _w[key]["dayPictureUrl"] +"/>";
                         img2 = "<img src="+ _w[key]["nightPictureUrl"] +"/>";
                         if (key == 0) {
-                            if(_w[key]["weather"].indexOf("雨") >= 0||_w[key]["weather"].indexOf("雪") >= 0){
-                                f1 = picurl+ "xue.png";
-                                f2 = picurl+ "xue.png";
+                            if(_w[key]["weather"].indexOf("雨") >= 0||_w[key]["weather"].indexOf("雪") >= 0)
+                            {
+                                if(_w[key]["weather"].indexOf("雨") >= 0){
+                                        f1 = c2e["雨"];
+                                        f2 = c2e["雨"];
+                                }else{
+                                    f1 = c2e["雪"];
+                                    f2 = c2e["雪"];
+                                }
                             }else{
-                                f1 = picurl + c2e[_w[key]["weather"]] + "_baitan.png";
-                                f2 = picurl + c2e[_w[key]["weather"]] + "_yejian.png";
+                                f1 = c2e[_w[key]["weather"]];
+                                f2 = c2e[_w[key]["weather"+"1"]];
                             }
+                            //////////
                             console.log(f1);
                             if (new Date().getHours() < 18) {
                                 $(_td[1]).html(img1);

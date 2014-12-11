@@ -31,14 +31,16 @@ body{
 /*导航*/
 .mod-themenav1, .mod-themenav2 {
     background: #eebd23;
-    height: 30px;
-    line-height: 30px;
+    height: 43px;
+    line-height: 43px;
+    border-top: 1px solid #8a4217;
+    border-bottom: 1px solid #8a4217;
 }
 .mod-themenav1 .dropbox{
 	border:1px solid #cecece !important;
 	width:40.625%;
 	right:5px;
-	top:40px;
+	top:55px;
 	font-size:15px;
 	box-shadow:none;
 }
@@ -48,10 +50,10 @@ body{
 	box-shadow:none;
 	border:1px solid #cecece !important;
 	width:40.625%;
-	bottom:40px;
+	bottom:55px;
 }
 .mod-themenav1 .dropbox li,.mod-themenav2 .dropbox li{
-	height:30px !important;
+	height:35px !important;
     padding: 0px;
     width: auto;
     border-top: 1px solid #cecece;
@@ -60,7 +62,7 @@ body{
 .mod-themenav1 .dropbox a,.mod-themenav2 .dropbox a{
     margin:0px 7.4%;
     width: auto;
-    line-height: 30px;
+    line-height: 35px;
 }
 .mod-themenav1 .dropbox ul,.mod-themenav2 .dropbox ul{
     background: #ffffff;
@@ -108,22 +110,22 @@ body{
 }
 .mod-themenav2 ul, .mod-themenav1 ul, .mod-themenav2 li, .mod-themenav1 li{
     height: 100%;
-    line-height: 40px;
+    line-height: 43px;
 	margin:0px;
 }
 .mod-themenav1  a, .mod-themenav2 a{
-	font-size: 13px;
+	font-size: 14px;
     background: none;
     color: #865410;
     border: none;
     height:100%;
-    line-height: 30px;
+    line-height: 43px;
 }
 .mod-themenav2 .cur a,
 .mod-themenav1 .cur a{
     background: url('../images/nav_style1_cur.png') repeat-x;
     background-size: 100% 100%;
-    color: #d8a12b;
+    color: #865410;
 }.mod-themenav1 a:before, .mod-themenav2 a:before{
     content: "";
 }.mod-themenav1 li:first-child .cur a, .mod-themenav2 li:first-child .cur a{
@@ -136,13 +138,15 @@ body{
 	line-height:100%;
 }
 .mod-themenav4  .cur a, .mod-themenav3  .cur a {
-	color:#f88412;
+	color:#865410;
 }
 .mod-nav {
-    height:30px !important;
+    height:35px !important;
     position: relative;
     border-bottom: 0px;
     border-top: 0px;
+    border-top: 1px solid #8a4217 !important;
+    border-bottom: 1px solid #8a4217 !important;
 }.mod-nav.t1, .mod-nav-theme1{
     background: #eebd23;
     border: none;
@@ -347,12 +351,12 @@ body{
 新样式规则为mod-nav.t1 mod-nav.t2 mod-nav.t3
 */
 .mod-nav li{
-	line-height:30px;
-    height: 30px;
+	line-height:35px;
+    height: 35px;
 }
 .mod-nav a{
-    height: 30px !important;
-    line-height: 30px !important;
+    height: 35px !important;
+    line-height: 35px !important;
     font-size: 13px;
     max-width: 70%;
 }
@@ -409,7 +413,7 @@ body{
     border-left: 0px;
 }
 .mod-nav.t2 li, .mod-nav-theme2 li,.mod-nav.t3 li, .mod-nav-theme3 li{
-	height:30px;
+	height:35px;
 }
 .mod-nav li:first-child .cur a, .mod-nav-theme li:first-child .cur a{
     border-radius: 4px 0px 0px 4px;
@@ -1011,20 +1015,20 @@ body{
     background: #ffffff;
 }
 .mod-themenav3 li{    
-    height: 30px;
-    line-height: 30px;
+    height: 35px;
+    line-height: 35px;
     border-bottom: 1px solid #cecece;
 }
 .mod-themenav3  li a{
     color:#865410;
     font-size: 13px;
-    height: 30px;
-    line-height: 30px;
+    height: 35px;
+    line-height: 35px;
 }
 .mod-themenav3  li .cur a{
     font-size: 13px;
-    height: 30px;
-    line-height: 30px;
+    height: 35px;
+    line-height: 35px;
 }
 /*分割线*/
 .mod-divider hr{
@@ -1036,6 +1040,8 @@ body{
 .mod-themenav1 .more a,.mod-themenav2 .more a{
 	border-radius:0px 4px 4px 0px;
     color: #865410;
+    line-height: 43px;
+    height: 43px;
 }
 .configurator .option .mod-link.t2:before{
 	height:18px;
@@ -1138,4 +1144,11 @@ body{
     background: #ffffff;
     box-shadow: 0px 1px 4px rgba(0,0,0,.4);
     border-radius: 2px;
+}
+/*电商订单*/
+.my-order .order-submit a{
+    border-left: 1px solid #865410;
+    border-radius: 4px;
+    border-right: 1px solid #865410;
+    padding: 0 !important;
 }
